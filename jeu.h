@@ -25,6 +25,7 @@ int tryAgain(int nbintro){
 }
 
  void jeu(int niveau,int nbBateau) {
+system("color db");
     SetConsoleOutputCP(65001);
     int Zero = 0;
      int quitter ,lign,col,a = 0,i = 0,nbrand1,nbrand2,placeV,placeH,num,nbcoup;
@@ -100,7 +101,7 @@ int tryAgain(int nbintro){
         lign = lign - 1;
 
 
-        while (grille[lign][col] == 2) {
+        while (grille[lign][col] == 6) {
             printf("La case a deja ete selectioner");
             printf("Try Again\n");
             printf("\nEntrer  la ligne:");
@@ -120,12 +121,12 @@ int tryAgain(int nbintro){
                 printf("Toucher\n");
                 system("pause");
                 grile[lign][col] = *"O";
-                grille[lign][col] = 2;
+                grille[lign][col] = 6;
                 nbBateau--;
             } else {
                 printf("Rater\n");
                 system("pause");
-                grille[lign][col] = 2;
+                grille[lign][col] = 6;
                 grile[lign][col] = *"X";
             }
 
@@ -137,8 +138,15 @@ int tryAgain(int nbintro){
             nbcoup--;}
 
     }
-    while ((quitter != 1) && (nbcoup != 0) && (nbBateau != 0) && (nbcoup > nbBateau));
-    
+    while ((quitter != 1) && (nbcoup != 0) && (nbBateau != 0) && (nbcoup >= nbBateau));
 
+    if(nbcoup==0 || nbcoup < nbBateau){
+        printf("Partie perdu\n");
 
+    } else{
+        if(nbBateau == 0){
+            printf("Bravo partie gagné\n");
+        }
+    }
+   system("pause");
 }

@@ -16,7 +16,7 @@ void reglement(){
 
     int choix;
     system("cls");
-    printf("__________AIDE___________");
+    printf("__________AIDE___________\n");
     printf("Quelle aide voulez vous ?\n");
     printf("1.reglement \n 2.Jouabilité \n3.Quitter");
     scanf("%d", &choix);
@@ -25,12 +25,12 @@ void reglement(){
         switch (choix) {
             case 1:
                 printf("_____REGLEMENT______\n");
-                printf("1.Jouer \n2.Amusez-vous\nLe but du jeu est de couler tous les bateaux de l’adversaire. Pour cela, chacun votre tour, vous devez essayer de « tirer » sur ses navires en devinant leurs positions. Pour tirer, il faut citer les coordonnées d’un emplacement comprenant un chiffre et une lettre. Par exemple : H5. Si le bateau de votre opposant se trouve à cette position alors il est touché et vous pouvez rejouer Pour couler le navire, il faut le toucher entièrement. C’est-à-dire qu’un bateau prenant 5 cases doit être atteint en ses 5 cases pour être coulé. Le premier à faire chavirer tous les navires de l’autre a gagné.  ");
+                printf("1.Le but du jeu est de couler tous les bateaux de l’adversaire. Pour cela, vous devez essayer de « tirer » sur ses navires en devinant leurs positions. Pour tirer, il faut citer les coordonnées d’un emplacement comprenant un chiffre de ligne et un chiffre de cologne. Par exemple : ligne 1 et cologne 5. Si le bateau se trouve à cette position alors il est touché si no c'est raté et vous pouvez rejouer Pour couler le navire, il faut le toucher entièrement. C’est-à-dire qu’un bateau prenant 5 cases doit être atteint en ses 5 cases pour être coulé.Il faut chavirer tous les navires pour gagner gagné.  ");
                 system("pause");
                 break;
             case 2:
                 printf("_____JOUABILITE______\n");
-                printf("1.Jouer \n2.Amusez-vous\n");
+                printf("1.Pour selectioner une option sevez-vous des chiffre et pas des lettres. \n2.Pour selectioner une case dans la grille entre la ligne au quel il se trouve en suite la cologne.\n");
                 system("pause");
                 break;
             default:
